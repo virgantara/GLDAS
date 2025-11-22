@@ -1,0 +1,14 @@
+scikit-learn
+rioxarray
+cartopy
+geopandas
+numpy
+pandas
+shapely
+matplotlib
+netCDF4
+h5netcdf
+xgboost
+torch
+torchvision
+tqdm

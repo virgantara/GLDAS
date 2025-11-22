@@ -17,7 +17,7 @@ EARTH_RADIUS_KM = 6371
 # Konversi Centimeters to kilometers
 CM_TO_KM_RATIO = 1e-5
 # Here, input the file path to the base data directory
-BASE_DIR = ''
+BASE_DIR = 'data'
 # Figure size (plot) yang akan dibuat, yaitu 10x10 inci.
 FIG_SIZE = (10, 10)
 

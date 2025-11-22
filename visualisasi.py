@@ -2,7 +2,7 @@
 # GRACE vs GLDAS EWH Time Series (2005–2025)
 # Full Script from Reading Data to Plotting (Interval 2 Tahun)
 # ============================================================
-
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -10,8 +10,8 @@ import matplotlib.dates as mdates
 # ============================================================
 # 1. LOAD DATA GRACE (0.5°)
 # ============================================================
-
-grace = pd.read_csv("Input_R_GRACE-GLDAS_2005-2025_0_5.csv",
+BASE_DIR = 'data'
+grace = pd.read_csv(os.path.join(BASE_DIR, "Input_R_GRACE-GLDAS_2005-2025_0_5.csv"),
                     delimiter=',')
 
 grace['time'] = pd.to_datetime(grace['time'])
@@ -35,7 +35,7 @@ colors_rdylbu = {
 # 2. LOAD DATA GLDAS (0.25° / 0.5° after resample)
 # ============================================================
 
-gldas = pd.read_csv("Input_R_GLDAS_2005-2025_0_25.csv",
+gldas = pd.read_csv(os.path.join(BASE_DIR, "Input_R_GLDAS_2005-2025_0_25.csv"),
                     delimiter=',')
 
 gldas['time'] = pd.to_datetime(gldas['time'])
